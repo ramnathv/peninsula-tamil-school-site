@@ -225,8 +225,7 @@ export default function ContactPage() {
                   href={`tel:${schoolInfo.phone}`}
                   className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-tamil-red font-semibold rounded-lg border-2 border-tamil-red hover:bg-bg-light-orange transition-all duration-200"
                 >
-                  <PhoneIcon className="w-5 h-5" />
-                  {language === 'en' ? 'Call Us' : 'எங்களை அழைக்கவும்'}
+
                 </a>
               </div>
             </div>
