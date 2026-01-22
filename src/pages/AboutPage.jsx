@@ -78,27 +78,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Mission Section */}
-      <section className="section-padding bg-bg-warm">
-        <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="max-w-4xl mx-auto"
-          >
-            <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 border-l-8 border-tamil-red">
-              <h2 className="text-3xl md:text-4xl font-bold text-tamil-red mb-6">
-                {t(aboutContent.mission.title, language)}
-              </h2>
-              <p className="text-xl text-text-secondary leading-relaxed">
-                {t(aboutContent.mission.text, language)}
-              </p>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+
 
       {/* Offerings Section */}
       <section className="section-padding">

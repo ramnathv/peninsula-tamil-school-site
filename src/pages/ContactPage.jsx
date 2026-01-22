@@ -221,12 +221,7 @@ export default function ContactPage() {
                   <EnvelopeIcon className="w-5 h-5" />
                   {language === 'en' ? 'Email Us' : 'மின்னஞ்சல் அனுப்பவும்'}
                 </a>
-                <a
-                  href={`tel:${schoolInfo.phone}`}
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-tamil-red font-semibold rounded-lg border-2 border-tamil-red hover:bg-bg-light-orange transition-all duration-200"
-                >
 
-                </a>
               </div>
             </div>
           </motion.div>

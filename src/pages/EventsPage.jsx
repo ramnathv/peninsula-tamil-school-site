@@ -29,24 +29,22 @@ function EventCard({ event }) {
   return (
     <motion.div
       variants={itemVariants}
-      className={`bg-white rounded-xl shadow-sm border-2 overflow-hidden hover:shadow-lg transition-all duration-300 ${
-        isFeatured
-          ? 'border-tamil-red shadow-md'
-          : isHoliday
+      className={`bg-white rounded-xl shadow-sm border-2 overflow-hidden hover:shadow-lg transition-all duration-300 ${isFeatured
+        ? 'border-tamil-red shadow-md'
+        : isHoliday
           ? 'border-gray-200 opacity-80'
           : 'border-gray-200'
-      } ${isFeatured ? 'transform hover:scale-105' : 'hover:-translate-y-1'}`}
+        } ${isFeatured ? 'transform hover:scale-105' : 'hover:-translate-y-1'}`}
     >
       <div className="flex">
         {/* Date Badge */}
         <div
-          className={`flex flex-col items-center justify-center p-6 text-center min-w-[100px] ${
-            isFeatured
-              ? 'bg-gradient-to-br from-tamil-red to-tamil-maroon text-white'
-              : isHoliday
+          className={`flex flex-col items-center justify-center p-6 text-center min-w-[100px] ${isFeatured
+            ? 'bg-gradient-to-br from-tamil-red to-tamil-maroon text-white'
+            : isHoliday
               ? 'bg-gray-100 text-gray-500'
               : 'bg-tamil-red/10 text-tamil-red'
-          }`}
+            }`}
         >
           <span className="text-sm font-semibold uppercase tracking-wide">
             {event.date.month}
@@ -210,12 +208,12 @@ export default function EventsPage() {
                   Contact Us
                 </a>
                 <a
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSf_N8CTm2VoOURDRdyv3pzqj3jOm7cfXOytXI3qq7zqdZvN7g/viewform"
+                  href="https://tinyurl.com/PTScalendar2025-26"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-6 py-3 bg-white text-tamil-red font-semibold rounded-lg border-2 border-tamil-red hover:bg-bg-light-orange transition-all duration-200"
                 >
-                  Enroll Now
+                  Download 2025-2026 Calendar
                 </a>
               </div>
             </div>

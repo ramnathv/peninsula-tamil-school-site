@@ -86,15 +86,7 @@ export default function Footer() {
                   {schoolInfo.email}
                 </a>
               </p>
-              <p>
-                <span className="block text-sm text-gray-400">Phone:</span>
-                <a
-                  href={`tel:${schoolInfo.phone}`}
-                  className="hover:text-tamil-orange transition-colors duration-200"
-                >
-                  {schoolInfo.phone}
-                </a>
-              </p>
+
               <p>
                 <span className="block text-sm text-gray-400">Location:</span>
                 <span className="block">{schoolInfo.address.venue}</span>
@@ -110,7 +102,8 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-gray-700 mt-12 pt-8 text-center">
           <p className="text-gray-400 text-sm">
-            &copy; {currentYear} {schoolInfo.name}. All rights reserved.
+            &copy; {currentYear} {schoolInfo.name}. All rights reserved. <br />
+            Supported by Foster City Counsel
           </p>
         </div>
       </div>
