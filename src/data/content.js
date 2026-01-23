@@ -24,7 +24,7 @@ export const schoolInfo = {
   phone: "",
   email: "principal@peninsulatamilschool.org",
   address: {
-    venue: "Peninsula Tamil School",
+    venue: "Hillsdale High School",
     street: "3115 Del Monte St",
     city: "San Mateo",
     state: "CA",
