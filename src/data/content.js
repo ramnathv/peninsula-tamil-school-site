@@ -396,7 +396,7 @@ export const eventsData = [
     time: "Sunday, August 24, 2025",
     location: "Peninsula Tamil School - Hillsdale High School",
     description: "Welcome back! The 2025-2026 academic year begins. Meet your teachers and classmates!",
-    featured: true
+    featured: false
   },
   {
     date: { month: "AUG", day: "31" },
@@ -426,7 +426,7 @@ export const eventsData = [
     time: "Sunday, November 2, 2025",
     location: "Hillsdale Cafeteria",
     description: "No classes - Deepavali Event",
-    featured: false
+    featured: true
   },
   {
     date: { month: "NOV", day: "30" },
@@ -448,7 +448,7 @@ export const eventsData = [
     time: "Sunday, January 25, 2026 | 10:45 AM - 1:00 PM",
     location: "Foster City Library Wind Room",
     description: "No classes - Pongal (Tamil Harvest Festival)",
-    featured: false
+    featured: true
   },
   {
     date: { month: "FEB", day: "15" },
@@ -485,7 +485,7 @@ export const eventsData = [
     title: "Holiday",
     time: "Sunday, April 26, 2026",
     description: "No classes - Holiday",
-    featured: true
+    featured: false
   },
   {
     date: { month: "MAY", day: "10" },
