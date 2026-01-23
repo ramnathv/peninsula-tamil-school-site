@@ -384,122 +384,115 @@ export const classesContent = {
 
 export const eventsData = [
   {
-    date: { month: "AUG", day: "20" },
+    date: { month: "AUG", day: "24" },
     title: "First Day of PTS",
-    time: "Sunday, August 20, 2023",
-    location: "Peninsula Tamil School",
-    description: "Welcome back! The 2023-2024 academic year begins. Meet your teachers and classmates!",
+    time: "Sunday, August 24, 2025",
+    location: "Peninsula Tamil School - Hillsdale High School",
+    description: "Welcome back! The 2025-2026 academic year begins. Meet your teachers and classmates!",
     featured: true
   },
   {
-    date: { month: "SEP", day: "03" },
+    date: { month: "AUG", day: "31" },
     title: "Labor Day Holiday",
-    time: "Sunday, September 3, 2023",
+    time: "Sunday, August 31, 2025",
     description: "No classes - Labor Day Holiday",
     featured: false
   },
   {
-    date: { month: "OCT", day: "01" },
+    date: { month: "SEP", day: "28" },
     title: "Fall Break Holiday",
-    time: "Sunday, October 1, 2023",
+    time: "Sunday, September 28, 2025",
     description: "No classes - Fall Break",
     featured: false
   },
   {
-    date: { month: "OCT", day: "29" },
+    date: { month: "OCT", day: "26" },
     title: "First Test",
-    time: "Sunday, October 29, 2023",
+    time: "Sunday, October 26, 2025",
     location: "Peninsula Tamil School",
     description: "First semester assessment for all students",
     featured: false
   },
   {
-    date: { month: "NOV", day: "12" },
+    date: { month: "NOV", day: "2" },
     title: "Deepavali Holiday",
-    time: "Sunday, November 12, 2023",
-    description: "No classes - Deepavali (Festival of Lights)",
+    time: "Sunday, November 2, 2025",
+    location: "Hillsdale Cafeteria",
+    description: "No classes - Deepavali Event",
     featured: false
   },
   {
-    date: { month: "NOV", day: "19" },
-    title: "PTS Deepavali Game Day",
-    time: "Sunday, November 19, 2023 | 10:00 AM - 2:00 PM",
-    location: "Peninsula Tamil School",
-    description: "Special celebration with traditional games, activities, and cultural performances for Deepavali!",
-    featured: true
-  },
-  {
-    date: { month: "NOV", day: "26" },
+    date: { month: "NOV", day: "30" },
     title: "Thanksgiving Holiday",
-    time: "Sunday, November 26, 2023",
+    time: "Sunday, November 30, 2025",
     description: "No classes - Thanksgiving Holiday",
     featured: false
   },
   {
-    date: { month: "DEC", day: "17" },
+    date: { month: "DEC", day: "21" },
     title: "Winter Break Hold",
-    time: "December 17, 24, 31, 2023",
+    time: "December 21 and 28, 2025 & January 4, 2026",
     description: "No classes during winter break (3 weeks)",
     featured: false
   },
   {
-    date: { month: "JAN", day: "14" },
-    title: "Pongal Holiday",
-    time: "Sunday, January 14, 2024",
+    date: { month: "JAN", day: "25" },
+    title: "Pongal Event",
+    time: "Sunday, January 25, 2026 | 10:45 AM - 1:00 PM",
+    location: "Foster City Library Wind Room",
     description: "No classes - Pongal (Tamil Harvest Festival)",
     featured: false
   },
   {
-    date: { month: "JAN", day: "21" },
-    title: "PTS Pongal & Teacher Appreciation",
-    time: "Sunday, January 21, 2024 | 10:00 AM - 2:00 PM",
-    location: "Peninsula Tamil School",
-    description: "Celebrate Pongal with traditional cooking, performances, and honor our dedicated teachers!",
+    date: { month: "FEB", day: "15" },
+    title: "President's Day Holiday",
+    time: "February 15, 2026",
+    description: "No classes - President's Day",
     featured: true
   },
   {
-    date: { month: "FEB", day: "18" },
-    title: "President Day Holiday",
-    time: "Sunday, February 18, 2024",
-    description: "No classes - President's Day",
-    featured: false
-  },
-  {
-    date: { month: "MAR", day: "03" },
+    date: { month: "Mar", day: "01" },
     title: "Second Test",
-    time: "Sunday, March 3, 2024",
+    time: "Sunday, March 1, 2026",
     location: "Peninsula Tamil School",
     description: "Second semester assessment for all students",
     featured: false
   },
   {
-    date: { month: "MAR", day: "31" },
+    date: { month: "APR", day: "05" },
     title: "Spring Break Holiday",
-    time: "Sunday, March 31, 2024",
+    time: "Sunday, April 5, 2026",
     description: "No classes - Spring Break",
     featured: false
   },
   {
-    date: { month: "APR", day: "14" },
+    date: { month: "APR", day: "25" },
     title: "Annual Day",
-    time: "Sunday, April 14, 2024 | 2:00 PM - 6:00 PM",
-    location: "Foster City Community Theater",
+    time: "Saturday, April 25, 2026 | 8:00 AM - 1:00 PM",
+    location: "Burlingame High School",
     description: "Our biggest celebration! Student performances, cultural programs, awards ceremony, and community gathering. All families invited!",
     featured: true
   },
   {
-    date: { month: "MAY", day: "19" },
+    date: { month: "APR", day: "26" },
+    title: "Holiday",
+    time: "Sunday, April 26, 2026",
+    description: "No classes - Holiday",
+    featured: true
+  },
+  {
+    date: { month: "MAY", day: "10" },
     title: "Final Test",
-    time: "Sunday, May 19, 2024",
+    time: "Sunday, May 10, 2026",
     location: "Peninsula Tamil School",
     description: "Final assessment for all students - End of year evaluation",
     featured: false
   },
   {
-    date: { month: "MAY", day: "26" },
+    date: { month: "MAY", day: "17" },
     title: "Graduation Day",
-    time: "Sunday, May 26, 2024 | 2:00 PM - 5:00 PM",
-    location: "Foster City Community Theater",
+    time: "Sunday, May 17, 2026 | 12:00 PM - 5:00 PM",
+    location: "Coyote Point",
     description: "Celebrating our graduating students! Certificate distribution, recognition ceremony, and farewell performances. Join us in honoring our students' achievements!",
     featured: true
   }
