@@ -21,7 +21,7 @@ export const navigationTranslations = {
 export const schoolInfo = {
   name: "Peninsula Tamil School",
   tagline: "Preserving Tamil language and culture for future generations in the Bay Area.",
-  phone: "(650) 555-1234",
+  phone: "",
   email: "principal@peninsulatamilschool.org",
   address: {
     venue: "Peninsula Tamil School",
@@ -29,21 +29,22 @@ export const schoolInfo = {
     city: "San Mateo",
     state: "CA",
     zip: "94403",
-    full: "3115 Del Monte St, San Mateo, CA 94403"
+    full: "Classes are taught every Sunday at Hillsdale High School in San Mateo"
   },
   mailingAddress: "3115 Del Monte St, San Mateo, CA 94403",
   schedule: {
     day: "Every Sunday",
-    time: "10:00 AM - 12:30 PM",
+    time: "10:20 AM - 12:20 PM",
     duration: "34 weeks (August through May)",
     students: "Students Pre-K to Grade 7",
     welcome: "All levels welcome",
     mode: "In-person and hybrid instruction available"
   },
   social: {
-    facebook: "https://www.facebook.com/PeninsulaTamilSchool"
+    facebook: "https://www.facebook.com/PeninsulaTamilSchool",
+    instagram: "https://www.instagram.com/peninsulatamilschool"
   },
-  enrollmentLink: "https://docs.google.com/forms/d/e/1FAIpQLSfQ6O7ydiFo1bh2ZIqwGIx3y5PSgqBSkko5rilFHKRp6nHn9Q/viewform",
+  enrollmentLink: "https://tinyurl.com/PTSregistration2025-26",
   nonprofit: {
     status: "501(c)(3) Nonprofit Organization",
     ein: "45-5506063"
@@ -108,7 +109,7 @@ export const galleryContent = {
       alt: "Tamil cultural performance",
       title: "Annual Day Performance",
       description: "Traditional Tamil dance by our students",
-      category: "performances"
+      category: "annual_day"
     },
     {
       id: 2,
@@ -124,7 +125,7 @@ export const galleryContent = {
       alt: "Tamil cultural event",
       title: "Cultural Celebration",
       description: "Community gathering for Tamil festival",
-      category: "events"
+      category: "festivals"
     },
     {
       id: 4,
@@ -132,7 +133,7 @@ export const galleryContent = {
       alt: "Tamil school event",
       title: "Pongal Celebration",
       description: "Traditional Tamil harvest festival",
-      category: "events"
+      category: "festivals"
     },
     {
       id: 5,
@@ -140,7 +141,7 @@ export const galleryContent = {
       alt: "Children performing in a play",
       title: "Children's Play Performance",
       description: "Students performing in a theatrical play",
-      category: "performances"
+      category: "annual_day"
     },
     {
       id: 6,
@@ -148,7 +149,7 @@ export const galleryContent = {
       alt: "Community group picture",
       title: "Community Gathering",
       description: "Group picture from community event",
-      category: "events"
+      category: "assembly"
     },
     {
       id: 7,
@@ -156,7 +157,7 @@ export const galleryContent = {
       alt: "Children in outdoor group activity",
       title: "Outdoor Learning",
       description: "Students participating in outdoor group activities",
-      category: "classroom"
+      category: "assembly"
     },
     {
       id: 8,
@@ -164,7 +165,7 @@ export const galleryContent = {
       alt: "Pongal celebration with bull decoration",
       title: "Pongal Festival",
       description: "Community celebrating Pongal with traditional bull decoration",
-      category: "events"
+      category: "festivals"
     },
     {
       id: 9,
@@ -172,7 +173,7 @@ export const galleryContent = {
       alt: "Adults at community gathering",
       title: "Community Event",
       description: "Adults gathering for community event",
-      category: "events"
+      category: "assembly"
     },
     {
       id: 10,
@@ -189,16 +190,24 @@ export const galleryContent = {
       label: { en: 'All Photos', ta: 'அனைத்து புகைப்படங்கள்' }
     },
     {
-      id: 'performances',
-      label: { en: 'Performances', ta: 'நிகழ்ச்சிகள்' }
+      id: 'festivals',
+      label: { en: 'Festivals (Pongal & Deepavali)', ta: 'பண்டிகைகள்' }
     },
     {
-      id: 'classroom',
-      label: { en: 'Classroom', ta: 'வகுப்பறை' }
+      id: 'annual_day',
+      label: { en: 'Annual Day Celebrations', ta: 'ஆண்டு விழா கொண்டாட்டங்கள்' }
     },
     {
-      id: 'events',
-      label: { en: 'Events', ta: 'நிகழ்வுகள்' }
+      id: 'graduation',
+      label: { en: 'Graduation', ta: 'பட்டமளிப்பு விழா' }
+    },
+    {
+      id: 'assembly',
+      label: { en: 'Assembly Events', ta: 'சபை நிகழ்வுகள்' }
+    },
+    {
+      id: 'milestones',
+      label: { en: 'Milestones (10th Year)', ta: 'மைல்கற்கள்' }
     }
   ],
   emptyState: {
@@ -282,23 +291,21 @@ export const aboutContent = {
       {
         en: "We conduct classes every Sunday at a high school in San Mateo, providing a consistent and structured learning environment for students from Pre-Kindergarten through Grade 7, with both in-person and hybrid instruction options available.",
         ta: "நாங்கள் ஒவ்வொரு ஞாயிற்றுக்கிழமையும் சான் மாத்தேயோவில் உள்ள உயர்நிலைப் பள்ளியில் வகுப்புகளை நடத்துகிறோம், Pre-Kindergarten முதல் 7 ஆம் வகுப்பு வரை மாணவர்களுக்கு நேரடி மற்றும் கலப்பின பயிற்சி விருப்பங்களுடன் ஒரு நிலையான மற்றும் கட்டமைக்கப்பட்ட கற்றல் சூழலை வழங்குகிறோம்."
+      },
+      {
+        en: "Our Mission: To provide quality Tamil language education and foster appreciation for Indian cultural heritage among children and adults in the Peninsula area through dedicated volunteer instruction and community engagement.",
+        ta: "எங்கள் நோக்கம்: அர்ப்பணிப்புள்ள தன்னார்வ பயிற்சி மற்றும் சமூக ஈடுபாட்டின் மூலம் தீபகற்ப பகுதியில் உள்ள குழந்தைகள் மற்றும் பெரியவர்களிடையே தரமான தமிழ் மொழி கல்வியை வழங்குவதும் இந்திய கலாச்சார பாரம்பரியத்திற்கான மதிப்பை வளர்ப்பதும்."
       }
     ]
   },
-  mission: {
-    title: { en: "Our Mission", ta: "எங்கள் இலக்கு" },
-    text: {
-      en: "To provide quality Tamil language education and foster appreciation for Indian cultural heritage among children and adults in the Peninsula area through dedicated volunteer instruction and community engagement.",
-      ta: "அர்ப்பணிப்புள்ள தன்னார்வ பயிற்சி மற்றும் சமூக ஈடுபாட்டின் மூலம் தீபகற்ப பகுதியில் உள்ள குழந்தைகள் மற்றும் பெரியவர்களிடையே தரமான தமிழ் மொழி கல்வியை வழங்குவதும் இந்திய கலாச்சார பாரம்பரியத்திற்கான மதிப்பை வளர்ப்பதும்."
-    }
-  },
+
   offerings: {
     title: { en: "What We Offer", ta: "நாங்கள் வழங்குவது" },
     items: [
       { en: "Structured curriculum from Pre-K through Grade 7", ta: "Pre-K முதல் 7 ஆம் வகுப்பு வரை கட்டமைக்கப்பட்ட பாடத்திட்டம்" },
       { en: "Tamil conversation class for speaking practice", ta: "பேச்சு பயிற்சிக்கான தமிழ் உரையாடல் வகுப்பு" },
-      { en: "In-person and hybrid instruction options", ta: "நேரடி மற்றும் கலப்பின பயிற்சி விருப்பங்கள்" },
-      { en: "Experienced volunteer teachers with Tamil language expertise", ta: "தமிழ் மொழி நிபுணத்துவம் கொண்ட அனுபவமிக்க தன்னார்வ ஆசிரியர்கள்" },
+      { en: "In-person and virtual class options", ta: "நேரடி மற்றும் இணையவழி வகுப்பு விருப்பங்கள்" },
+      { en: "Experienced and dedicated teachers with Tamil language expertise", ta: "தமிழ் மொழி நிபுணத்துவம் கொண்ட அனுபவமிக்க மற்றும் அர்ப்பணிப்புள்ள ஆசிரியர்கள்" },
       { en: "Language learning combined with cultural education", ta: "கலாச்சார கல்வியுடன் இணைந்த மொழி கற்றல்" },
       { en: "Regular community events and celebrations", ta: "வழக்கமான சமூக நிகழ்வுகள் மற்றும் கொண்டாட்டங்கள்" },
       { en: "Convenient Sunday classes", ta: "வசதியான ஞாயிறு வகுப்புகள்" },
@@ -365,7 +372,7 @@ export const classesContent = {
   ],
   schedule: {
     title: { en: "Class Schedule", ta: "வகுப்பு அட்டவணை" },
-    when: { en: "Every Sunday, 10:00 AM - 12:30 PM", ta: "ஒவ்வொரு ஞாயிறும், காலை 10:00 - மதியம் 12:30" },
+    when: { en: "Every Sunday, 10:20 AM - 12:20 PM", ta: "ஒவ்வொரு ஞாயிறும், காலை 10:20 - மதியம் 12:20" },
     where: { en: "High School in San Mateo, 3115 Del Monte St, San Mateo, CA 94403", ta: "சான் மாத்தேயோ உயர்நிலைப் பள்ளி, 3115 Del Monte St, San Mateo, CA 94403" },
     duration: { en: "34 weeks (August through May)", ta: "34 வாரங்கள் (ஆகஸ்ட் முதல் மே வரை)" },
     mode: { en: "In-person and hybrid instruction available", ta: "நேரடி மற்றும் கலப்பின பயிற்சி கிடைக்கும்" }
@@ -542,7 +549,7 @@ export const contactContent = {
       icon: "clock",
       title: { en: "Class Hours", ta: "வகுப்பு நேரம்" },
       lines: [
-        { en: "Sundays: 10:20 AM - 12:20 PM", ta: "ஞாயிறுகள்: காலை 10:00 - மதியம் 12:30" },
+        { en: "Sundays: 10:20 AM - 12:20 PM", ta: "ஞாயிறுகள்: காலை 10:20 - மதியம் 12:20" },
         { en: "August through May", ta: "ஆகஸ்ட் முதல் மே வரை" }
       ]
     }
