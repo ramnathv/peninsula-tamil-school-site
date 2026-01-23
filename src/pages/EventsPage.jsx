@@ -165,7 +165,7 @@ export default function EventsPage() {
               {featuredEvents.length > 0 ? 'Full Calendar' : 'All Events'}
             </h2>
             <p className="text-xl text-text-secondary">
-              Academic year 2023-2024 schedule
+              Academic year 2025-2026 schedule
             </p>
           </motion.div>
 
