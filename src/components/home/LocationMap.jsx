@@ -53,7 +53,7 @@ export default function LocationMap() {
             Find Us
           </h2>
           <p className="text-lg text-text-secondary max-w-2xl mx-auto">
-            Visit us at Foster City Recreation Center every Sunday
+            {schoolInfo.address.full}
           </p>
         </motion.div>
 
@@ -66,14 +66,14 @@ export default function LocationMap() {
             className="rounded-2xl overflow-hidden shadow-xl border-4 border-tamil-orange/20"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3169.8686826573774!2d-122.27161492347753!3d37.56016217205009!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f9f3b3b3b3b3b%3A0x1234567890abcdef!2sFoster%20City%20Recreation%20Center!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+              src="https://www.google.com/maps?q=Hillsdale+High+School,+San+Mateo,+CA&output=embed"
               width="100%"
               height="400"
               style={{ border: 0 }}
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Foster City Recreation Center Location"
+              title="Peninsula Tamil School Location"
             />
           </motion.div>
 

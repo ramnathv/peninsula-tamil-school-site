@@ -135,7 +135,7 @@ export default function ContactPage() {
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
               <div className="aspect-w-16 aspect-h-9 h-[400px] md:h-[500px]">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.123456789!2d-122.3!3d37.55!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDMzJzAwLjAiTiAxMjLCsDE4JzAwLjAiVw!5e0!3m2!1sen!2sus!4v1234567890"
+                  src="https://www.google.com/maps?q=Hillsdale+High+School,+San+Mateo,+CA&output=embed"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

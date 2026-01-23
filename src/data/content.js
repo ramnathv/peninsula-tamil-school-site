@@ -256,13 +256,13 @@ export const quickInfoCards = [
 export const upcomingEvents = [
   {
     month: "JAN",
-    day: "21",
+    day: "25",
     title: "PTS Pongal & Teacher Appreciation",
     description: "Celebrate Pongal with traditional cooking, performances, and honor our dedicated teachers!"
   },
   {
     month: "APR",
-    day: "14",
+    day: "25",
     title: "Annual Day",
     description: "Our biggest celebration with student performances, cultural programs, and awards ceremony!"
   }

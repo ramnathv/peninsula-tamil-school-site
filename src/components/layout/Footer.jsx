@@ -16,6 +16,9 @@ export default function Footer() {
             <p className="text-gray-300 leading-relaxed">
               {schoolInfo.tagline}
             </p>
+            <p className="text-sm text-gray-400 mt-2">
+              Supported by Foster City Council
+            </p>
             <div className="pt-2">
               <p className="text-sm text-gray-400">
                 {schoolInfo.nonprofit.status}
@@ -102,8 +105,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-gray-700 mt-12 pt-8 text-center">
           <p className="text-gray-400 text-sm">
-            &copy; {currentYear} {schoolInfo.name}. All rights reserved. <br />
-            Supported by Foster City Counsel
+            &copy; {currentYear} {schoolInfo.name}. All rights reserved.
           </p>
         </div>
       </div>
