@@ -391,119 +391,266 @@ export const classesContent = {
 
 export const eventsData = [
   {
-    date: { month: "AUG", day: "24" },
+    date: { month: "AUG", day: "09" },
+    title: "PICA Potluck Day",
+    time: "Sunday, August 9, 2026",
+    location: "Peninsula Tamil School, San Mateo",
+    description: "Join us for the PICA Potluck Day to kick off the new school year.",
+    featured: false
+  },
+  {
+    date: { month: "AUG", day: "16" },
     title: "First Day of PTS",
-    time: "Sunday, August 24, 2025",
-    location: "Peninsula Tamil School - Hillsdale High School",
-    description: "Welcome back! The 2025-2026 academic year begins. Meet your teachers and classmates!",
+    time: "Sunday, August 16, 2026",
+    location: "Peninsula Tamil School, San Mateo",
+    description: "Welcome back! The 2026-2027 academic year begins. Meet your teachers and classmates!",
+    featured: true
+  },
+  {
+    date: { month: "SEP", day: "06" },
+    title: "Labour Day Holiday",
+    time: "Sunday, September 6, 2026",
+    location: "No School",
+    description: "School is closed in observance of the Labor Day holiday.",
     featured: false
   },
   {
-    date: { month: "AUG", day: "31" },
-    title: "Labor Day Holiday",
-    time: "Sunday, August 31, 2025",
-    description: "No classes - Labor Day Holiday",
-    featured: false
-  },
-  {
-    date: { month: "SEP", day: "28" },
+    date: { month: "OCT", day: "04" },
     title: "Fall Break Holiday",
-    time: "Sunday, September 28, 2025",
-    description: "No classes - Fall Break",
+    time: "Sunday, October 4, 2026",
+    location: "No School",
+    description: "School is closed for Fall Break.",
     featured: false
   },
   {
-    date: { month: "OCT", day: "26" },
-    title: "First Test",
-    time: "Sunday, October 26, 2025",
-    location: "Peninsula Tamil School",
-    description: "First semester assessment for all students",
+    date: { month: "NOV", day: "01" },
+    title: "First Term Test",
+    time: "Sunday, November 1, 2026",
+    location: "Peninsula Tamil School, San Mateo",
+    description: "First term examinations for all grades.",
     featured: false
   },
   {
-    date: { month: "NOV", day: "2" },
+    date: { month: "NOV", day: "08" },
     title: "Deepavali Holiday",
-    time: "Sunday, November 2, 2025",
-    location: "Hillsdale Cafeteria",
-    description: "No classes - Deepavali Event",
+    time: "Sunday, November 8, 2026",
+    location: "No School",
+    description: "School is closed for the Deepavali holiday.",
+    featured: false
+  },
+  {
+    date: { month: "NOV", day: "15" },
+    title: "Deepavali Celebration",
+    time: "Sunday, November 15, 2026",
+    location: "Peninsula Tamil School, San Mateo",
+    description: "Join us in celebrating the festival of lights with performances and activities.",
     featured: true
   },
   {
-    date: { month: "NOV", day: "30" },
+    date: { month: "NOV", day: "29" },
     title: "Thanksgiving Holiday",
-    time: "Sunday, November 30, 2025",
-    description: "No classes - Thanksgiving Holiday",
+    time: "Sunday, November 29, 2026",
+    location: "No School",
+    description: "School is closed for the Thanksgiving holiday weekend.",
     featured: false
   },
   {
-    date: { month: "DEC", day: "21" },
-    title: "Winter Break Hold",
-    time: "December 21 and 28, 2025 & January 4, 2026",
-    description: "No classes during winter break (3 weeks)",
+    date: { month: "DEC", day: "20" },
+    title: "Winter Break",
+    time: "Sunday, December 20, 2026",
+    location: "No School",
+    description: "School is closed for Winter Break.",
     featured: false
   },
   {
-    date: { month: "JAN", day: "25" },
+    date: { month: "DEC", day: "27" },
+    title: "Winter Break",
+    time: "Sunday, December 27, 2026",
+    location: "No School",
+    description: "School is closed for Winter Break.",
+    featured: false
+  },
+  {
+    date: { month: "JAN", day: "24" },
     title: "Pongal Event",
-    time: "Sunday, January 25, 2026 | 10:45 AM - 1:00 PM",
-    location: "Foster City Library Wind Room",
-    description: "No classes - Pongal (Tamil Harvest Festival)",
+    time: "Sunday, January 24, 2027",
+    location: "Peninsula Tamil School, San Mateo",
+    description: "Celebrate the harvest festival of Pongal with traditional festivities and food.",
     featured: true
   },
   {
-    date: { month: "FEB", day: "15" },
-    title: "President's Day Holiday",
-    time: "February 15, 2026",
-    description: "No classes - President's Day",
-    featured: true
-  },
-  {
-    date: { month: "Mar", day: "01" },
-    title: "Second Test",
-    time: "Sunday, March 1, 2026",
-    location: "Peninsula Tamil School",
-    description: "Second semester assessment for all students",
+    date: { month: "FEB", day: "14" },
+    title: "Mid Winter Break",
+    time: "Sunday, February 14, 2027",
+    location: "No School",
+    description: "School is closed for Mid Winter Break.",
     featured: false
   },
   {
-    date: { month: "APR", day: "05" },
-    title: "Spring Break Holiday",
-    time: "Sunday, April 5, 2026",
-    description: "No classes - Spring Break",
+    date: { month: "MAR", day: "07" },
+    title: "Second Term Test",
+    time: "Sunday, March 7, 2027",
+    location: "Peninsula Tamil School, San Mateo",
+    description: "Second term examinations for all grades.",
     featured: false
   },
   {
-    date: { month: "APR", day: "25" },
+    date: { month: "MAR", day: "28" },
+    title: "Spring Break",
+    time: "Sunday, March 28, 2027",
+    location: "No School",
+    description: "School is closed for Spring Break.",
+    featured: false
+  },
+  {
+    date: { month: "APR", day: "24" },
     title: "Annual Day",
-    time: "Saturday, April 25, 2026 | 8:00 AM - 1:00 PM",
-    location: "Burlingame High School",
-    description: "Our biggest celebration! Student performances, cultural programs, awards ceremony, and community gathering. All families invited!",
+    time: "Saturday, April 24, 2027",
+    location: "Peninsula Tamil School, San Mateo",
+    description: "Our grand Annual Day event celebrating the students' achievements throughout the year.",
     featured: true
   },
   {
-    date: { month: "APR", day: "26" },
-    title: "Holiday",
-    time: "Sunday, April 26, 2026",
-    description: "No classes - Holiday",
+    date: { month: "MAY", day: "09" },
+    title: "Final Term Test",
+    time: "Sunday, May 9, 2027",
+    location: "Peninsula Tamil School, San Mateo",
+    description: "Final examinations for the academic year.",
     featured: false
   },
   {
-    date: { month: "MAY", day: "10" },
-    title: "Final Test",
-    time: "Sunday, May 10, 2026",
-    location: "Peninsula Tamil School",
-    description: "Final assessment for all students - End of year evaluation",
-    featured: false
-  },
-  {
-    date: { month: "MAY", day: "17" },
+    date: { month: "MAY", day: "16" },
     title: "Graduation Day",
-    time: "Sunday, May 17, 2026 | 12:00 PM - 5:00 PM",
-    location: "Coyote Point",
-    description: "Celebrating our graduating students! Certificate distribution, recognition ceremony, and farewell performances. Join us in honoring our students' achievements!",
+    time: "Sunday, May 16, 2027",
+    location: "Peninsula Tamil School, San Mateo",
+    description: "Commencement ceremony to celebrate our graduating students.",
     featured: true
+  },
+  {
+    date: { month: "MAY", day: "21" },
+    title: "Graduation Day",
+    time: "Friday, May 21, 2027",
+    location: "Peninsula Tamil School, San Mateo",
+    description: "Additional Graduation Day events/ceremonies.",
+    featured: false
   }
 ];
+
+// export const eventsData = [
+//   {
+//     date: { month: "AUG", day: "24" },
+//     title: "First Day of PTS",
+//     time: "Sunday, August 24, 2025",
+//     location: "Peninsula Tamil School - Hillsdale High School",
+//     description: "Welcome back! The 2025-2026 academic year begins. Meet your teachers and classmates!",
+//     featured: false
+//   },
+//   {
+//     date: { month: "AUG", day: "31" },
+//     title: "Labor Day Holiday",
+//     time: "Sunday, August 31, 2025",
+//     description: "No classes - Labor Day Holiday",
+//     featured: false
+//   },
+//   {
+//     date: { month: "SEP", day: "28" },
+//     title: "Fall Break Holiday",
+//     time: "Sunday, September 28, 2025",
+//     description: "No classes - Fall Break",
+//     featured: false
+//   },
+//   {
+//     date: { month: "OCT", day: "26" },
+//     title: "First Test",
+//     time: "Sunday, October 26, 2025",
+//     location: "Peninsula Tamil School",
+//     description: "First semester assessment for all students",
+//     featured: false
+//   },
+//   {
+//     date: { month: "NOV", day: "2" },
+//     title: "Deepavali Holiday",
+//     time: "Sunday, November 2, 2025",
+//     location: "Hillsdale Cafeteria",
+//     description: "No classes - Deepavali Event",
+//     featured: true
+//   },
+//   {
+//     date: { month: "NOV", day: "30" },
+//     title: "Thanksgiving Holiday",
+//     time: "Sunday, November 30, 2025",
+//     description: "No classes - Thanksgiving Holiday",
+//     featured: false
+//   },
+//   {
+//     date: { month: "DEC", day: "21" },
+//     title: "Winter Break Hold",
+//     time: "December 21 and 28, 2025 & January 4, 2026",
+//     description: "No classes during winter break (3 weeks)",
+//     featured: false
+//   },
+//   {
+//     date: { month: "JAN", day: "25" },
+//     title: "Pongal Event",
+//     time: "Sunday, January 25, 2026 | 10:45 AM - 1:00 PM",
+//     location: "Foster City Library Wind Room",
+//     description: "No classes - Pongal (Tamil Harvest Festival)",
+//     featured: true
+//   },
+//   {
+//     date: { month: "FEB", day: "15" },
+//     title: "President's Day Holiday",
+//     time: "February 15, 2026",
+//     description: "No classes - President's Day",
+//     featured: true
+//   },
+//   {
+//     date: { month: "Mar", day: "01" },
+//     title: "Second Test",
+//     time: "Sunday, March 1, 2026",
+//     location: "Peninsula Tamil School",
+//     description: "Second semester assessment for all students",
+//     featured: false
+//   },
+//   {
+//     date: { month: "APR", day: "05" },
+//     title: "Spring Break Holiday",
+//     time: "Sunday, April 5, 2026",
+//     description: "No classes - Spring Break",
+//     featured: false
+//   },
+//   {
+//     date: { month: "APR", day: "25" },
+//     title: "Annual Day",
+//     time: "Saturday, April 25, 2026 | 8:00 AM - 1:00 PM",
+//     location: "Burlingame High School",
+//     description: "Our biggest celebration! Student performances, cultural programs, awards ceremony, and community gathering. All families invited!",
+//     featured: true
+//   },
+//   {
+//     date: { month: "APR", day: "26" },
+//     title: "Holiday",
+//     time: "Sunday, April 26, 2026",
+//     description: "No classes - Holiday",
+//     featured: false
+//   },
+//   {
+//     date: { month: "MAY", day: "10" },
+//     title: "Final Test",
+//     time: "Sunday, May 10, 2026",
+//     location: "Peninsula Tamil School",
+//     description: "Final assessment for all students - End of year evaluation",
+//     featured: false
+//   },
+//   {
+//     date: { month: "MAY", day: "17" },
+//     title: "Graduation Day",
+//     time: "Sunday, May 17, 2026 | 12:00 PM - 5:00 PM",
+//     location: "Coyote Point",
+//     description: "Celebrating our graduating students! Certificate distribution, recognition ceremony, and farewell performances. Join us in honoring our students' achievements!",
+//     featured: true
+//   }
+// ];
 
 export const galleryImages = [
   {
