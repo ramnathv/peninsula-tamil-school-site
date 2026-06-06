@@ -42,6 +42,13 @@
           run: npm ci
 
         - name: Build React app
+          env:
+            VITE_CMS_EVENTS_URL: ${{ vars.VITE_CMS_EVENTS_URL }}
+            VITE_CMS_EVENTS_TAMIL_URL: ${{ vars.VITE_CMS_EVENTS_TAMIL_URL }}
+            VITE_CMS_GALLERY_URL: ${{ vars.VITE_CMS_GALLERY_URL }}
+            VITE_CMS_ANNOUNCEMENT_URL: ${{ vars.VITE_CMS_ANNOUNCEMENT_URL }}
+            VITE_CMS_SETTINGS_URL: ${{ vars.VITE_CMS_SETTINGS_URL }}
+            VITE_CMS_CLASSES_URL: ${{ vars.VITE_CMS_CLASSES_URL }}
           run: npm run build
 
         - name: Setup Pages
