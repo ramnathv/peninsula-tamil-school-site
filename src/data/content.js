@@ -44,7 +44,7 @@ export const schoolInfo = {
     facebook: "https://www.facebook.com/PeninsulaTamilSchool",
     instagram: "https://www.instagram.com/peninsulatamilschool"
   },
-  enrollmentLink: "https://tinyurl.com/PTSregistration2025-26",
+  enrollmentLink: "https://tinyurl.com/pts2627",
   nonprofit: {
     status: "501(c)(3) Nonprofit Organization",
     ein: "45-5506063"
