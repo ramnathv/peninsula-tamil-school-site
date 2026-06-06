@@ -17,7 +17,7 @@ San Mateo, CA 94403
 - Instagram: [@pts_insta1920](https://www.instagram.com/pts_insta1920)
 
 ## Class Schedule
-**When:** Every Sunday, 9:45 AM - 12:00 PM  
+**When:** Every Sunday, 10:20 AM - 12:20 PM  
 **Who:** Students Pre-K to Grade 10, Adult learners welcome
 
 ## Website Structure
