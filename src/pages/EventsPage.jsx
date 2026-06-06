@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
-import { eventsData, t } from '../data/content';
+import { eventsData, eventsDataTamizh, t } from '../data/content';
 import { CalendarIcon, ClockIcon, MapPinIcon } from '@heroicons/react/24/outline';
 
 const containerVariants = {
@@ -23,10 +23,14 @@ const itemVariants = {
 };
 
 function EventCard({ event }) {
+  const { language } = useLanguage();
   const isFeatured = event.featured;
   const isHoliday = event.description && (
     event.description.includes('No classes') ||
-    event.description.includes('School is closed')
+    event.description.includes('School is closed') ||
+    event.description.includes('பள்ளிக்கு விடுமுறை') ||
+    event.description.includes('பள்ளி மூடப்பட்டுள்ளது') ||
+    (event.location && event.location.includes('பள்ளி இல்லை'))
   );
 
   return (
@@ -65,7 +69,7 @@ function EventCard({ event }) {
             </h3>
             {isFeatured && (
               <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-tamil-gold text-white whitespace-nowrap">
-                Featured
+                {language === 'en' ? 'Featured' : 'சிறப்பு நிகழ்வு'}
               </span>
             )}
           </div>
@@ -95,8 +99,9 @@ function EventCard({ event }) {
 
 export default function EventsPage() {
   const { language } = useLanguage();
-  const featuredEvents = eventsData.filter(event => event.featured);
-  const regularEvents = eventsData.filter(event => !event.featured);
+  const currentEventsData = language === 'ta' ? eventsDataTamizh : eventsData;
+  const featuredEvents = currentEventsData.filter(event => event.featured);
+  const regularEvents = currentEventsData.filter(event => !event.featured);
 
   return (
     <div className="min-h-screen bg-bg-cream">
@@ -112,11 +117,13 @@ export default function EventsPage() {
             <div className="flex items-center justify-center gap-4 mb-6">
               <CalendarIcon className="w-12 h-12" />
               <h1 className="text-4xl md:text-5xl font-bold">
-                School Events
+                {language === 'en' ? 'School Events' : 'பள்ளி நிகழ்வுகள்'}
               </h1>
             </div>
             <p className="text-xl md:text-2xl text-white/90">
-              Join us for cultural celebrations, assessments, and special events throughout the year
+              {language === 'en'
+                ? 'Join us for cultural celebrations, assessments, and special events throughout the year'
+                : 'ஆண்டு முழுவதும் கலாச்சார கொண்டாட்டங்கள், தேர்வுகள் மற்றும் சிறப்பு நிகழ்வுகளுக்கு எங்களுடன் இணையுங்கள்'}
             </p>
           </motion.div>
         </div>
@@ -133,10 +140,12 @@ export default function EventsPage() {
               className="mb-12 text-center"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-tamil-red mb-4">
-                Featured Events
+                {language === 'en' ? 'Featured Events' : 'சிறப்பு நிகழ்வுகள்'}
               </h2>
               <p className="text-xl text-text-secondary">
-                Don't miss these special celebrations and gatherings!
+                {language === 'en'
+                  ? "Don't miss these special celebrations and gatherings!"
+                  : 'இந்த சிறப்பு கொண்டாட்டங்களையும் நிகழ்வுகளையும் தவறவிடாதீர்கள்!'}
               </p>
             </motion.div>
 
@@ -165,10 +174,14 @@ export default function EventsPage() {
             className="mb-12 text-center"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-tamil-red mb-4">
-              {featuredEvents.length > 0 ? 'Full Calendar' : 'All Events'}
+              {featuredEvents.length > 0
+                ? (language === 'en' ? 'Full Calendar' : 'முழு நாட்காட்டி')
+                : (language === 'en' ? 'All Events' : 'அனைத்து நிகழ்வுகள்')}
             </h2>
             <p className="text-xl text-text-secondary">
-              Academic year 2025-2026 schedule
+              {language === 'en'
+                ? 'Academic year 2026-2027 schedule'
+                : 'கல்வியாண்டு 2026-2027 அட்டவணை'}
             </p>
           </motion.div>
 
@@ -179,7 +192,7 @@ export default function EventsPage() {
             viewport={{ once: true, margin: "-100px" }}
             className="max-w-5xl mx-auto space-y-6"
           >
-            {(featuredEvents.length > 0 ? regularEvents : eventsData).map((event, index) => (
+            {(featuredEvents.length > 0 ? regularEvents : currentEventsData).map((event, index) => (
               <EventCard key={index} event={event} />
             ))}
           </motion.div>
@@ -198,17 +211,19 @@ export default function EventsPage() {
           >
             <div className="bg-white rounded-2xl shadow-lg p-8 md:p-10 border-l-8 border-tamil-orange">
               <h3 className="text-2xl md:text-3xl font-bold text-tamil-red mb-4">
-                Stay Updated!
+                {language === 'en' ? 'Stay Updated!' : 'தொடர்ந்து இணைந்திருங்கள்!'}
               </h3>
               <p className="text-lg text-text-secondary leading-relaxed mb-6">
-                Event dates and details are subject to change. Please check your email regularly for updates and announcements from Peninsula Tamil School.
+                {language === 'en'
+                  ? 'Event dates and details are subject to change. Please check your email regularly for updates and announcements from Peninsula Tamil School.'
+                  : 'நிகழ்வு தேதிகள் மற்றும் விவரங்கள் மாற்றத்திற்கு உட்பட்டவை. பெனின்சுலா தமிழ் பள்ளியின் அறிவிப்புகள் மற்றும் தகவல்களுக்கு உங்கள் மின்னஞ்சலை தவறாமல் பார்க்கவும்.'}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
                   className="inline-flex items-center justify-center px-6 py-3 bg-tamil-red text-white font-semibold rounded-lg shadow-md hover:bg-tamil-maroon hover:shadow-lg transform hover:scale-105 transition-all duration-200"
                 >
-                  Contact Us
+                  {language === 'en' ? 'Contact Us' : 'எங்களைத் தொடர்பு கொள்ளவும்'}
                 </a>
                 <a
                   href="https://tinyurl.com/PTScalendar2026-27"
@@ -216,7 +231,7 @@ export default function EventsPage() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-6 py-3 bg-white text-tamil-red font-semibold rounded-lg border-2 border-tamil-red hover:bg-bg-light-orange transition-all duration-200"
                 >
-                  Download 2025-2026 Calendar
+                  {language === 'en' ? 'Download 2026-2027 Calendar' : '2026-2027 நாட்காட்டியைப் பதிவிறக்கவும்'}
                 </a>
               </div>
             </div>
