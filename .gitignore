@@ -28,3 +28,6 @@ npm-debug.log*
 
 # Old static site backup
 old-static-site/
+
+# Environment syncing scripts
+push-env-to-github.sh
