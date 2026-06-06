@@ -1,8 +1,10 @@
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { eventsData, eventsDataTamizh, t } from '../data/content';
 import { CalendarIcon, ClockIcon, MapPinIcon } from '@heroicons/react/24/outline';
+import { fetchFullEventsCMS } from '../services/cmsService';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -100,7 +102,24 @@ function EventCard({ event }) {
 
 export default function EventsPage() {
   const { language } = useLanguage();
-  const currentEventsData = language === 'ta' ? eventsDataTamizh : eventsData;
+  const [eventsEn, setEventsEn] = useState(eventsData);
+  const [eventsTa, setEventsTa] = useState(eventsDataTamizh);
+
+  useEffect(() => {
+    const loadEvents = async () => {
+      const urlEn = import.meta.env.VITE_CMS_EVENTS_URL;
+      const urlTa = import.meta.env.VITE_CMS_EVENTS_TAMIL_URL;
+
+      const dataEn = await fetchFullEventsCMS(urlEn, eventsData);
+      const dataTa = await fetchFullEventsCMS(urlTa, eventsDataTamizh);
+
+      setEventsEn(dataEn);
+      setEventsTa(dataTa);
+    };
+    loadEvents();
+  }, []);
+
+  const currentEventsData = language === 'ta' ? eventsTa : eventsEn;
   const featuredEvents = currentEventsData.filter(event => event.featured);
   const regularEvents = currentEventsData.filter(event => !event.featured);
 
