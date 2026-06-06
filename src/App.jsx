@@ -11,7 +11,7 @@ import ContactPage from './pages/ContactPage';
 
 function App() {
   return (
-    <Router>
+    <Router basename={import.meta.env.BASE_URL}>
       <LanguageProvider>
         <div className="flex flex-col min-h-screen">
           {/* Skip to main content link for keyboard accessibility */}
