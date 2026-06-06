@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
-import { aboutContent, t } from '../data/content';
+import { aboutContent, schoolInfo, t } from '../data/content';
 import { CheckCircleIcon } from '@heroicons/react/24/outline';
 
 const containerVariants = {
@@ -139,7 +139,7 @@ export default function AboutPage() {
                 {language === 'en' ? 'Contact Us' : 'எங்களை தொடர்பு கொள்ளுங்கள்'}
               </a>
               <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSfQ6O7ydiFo1bh2ZIqwGIx3y5PSgqBSkko5rilFHKRp6nHn9Q/viewform"
+                href={schoolInfo.enrollmentLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-4 bg-tamil-red text-white font-bold rounded-lg shadow-lg hover:bg-tamil-maroon hover:shadow-xl transform hover:scale-105 transition-all duration-200"
