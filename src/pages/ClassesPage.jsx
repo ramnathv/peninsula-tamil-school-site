@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
 import { classesContent, schoolInfo, t } from '../data/content';
@@ -9,6 +9,7 @@ import {
   CalendarIcon,
   AcademicCapIcon
 } from '@heroicons/react/24/outline';
+import { fetchClassesCMS } from '../services/cmsService';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -51,9 +52,8 @@ function ClassLevelCard({ level, index, isOpen, onToggle }) {
           </h3>
         </div>
         <ChevronDownIcon
-          className={`w-6 h-6 text-tamil-red transition-transform duration-300 ${
-            isOpen ? 'transform rotate-180' : ''
-          }`}
+          className={`w-6 h-6 text-tamil-red transition-transform duration-300 ${isOpen ? 'transform rotate-180' : ''
+            }`}
         />
       </button>
 
@@ -81,6 +81,16 @@ function ClassLevelCard({ level, index, isOpen, onToggle }) {
 export default function ClassesPage() {
   const { language } = useLanguage();
   const [openIndex, setOpenIndex] = useState(0);
+  const [classesList, setClassesList] = useState(classesContent.levels);
+
+  useEffect(() => {
+    const loadClasses = async () => {
+      const url = import.meta.env.VITE_CMS_CLASSES_URL;
+      const data = await fetchClassesCMS(url, classesContent.levels);
+      setClassesList(data);
+    };
+    loadClasses();
+  }, []);
 
   const handleToggle = (index) => {
     setOpenIndex(openIndex === index ? -1 : index);
@@ -133,7 +143,7 @@ export default function ClassesPage() {
             viewport={{ once: true, margin: "-100px" }}
             className="max-w-4xl mx-auto space-y-4"
           >
-            {classesContent.levels.map((level, index) => (
+            {classesList.map((level, index) => (
               <ClassLevelCard
                 key={index}
                 level={level}

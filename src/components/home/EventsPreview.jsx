@@ -1,12 +1,26 @@
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { upcomingEvents } from '../../data/content';
+import { fetchEventsCMS } from '../../services/cmsService';
 
 export default function EventsPreview() {
+  const [events, setEvents] = useState(upcomingEvents);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
+
+  useEffect(() => {
+    const loadEvents = async () => {
+      const url = import.meta.env.VITE_CMS_EVENTS_URL;
+      const data = await fetchEventsCMS(url, upcomingEvents);
+      // Slice to the first 2 events for the homepage preview to maintain a compact, polished layout
+      const previewEvents = data.slice(0, 2);
+      setEvents(previewEvents);
+    };
+    loadEvents();
+  }, []);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -53,9 +67,9 @@ export default function EventsPreview() {
           animate={isInView ? 'visible' : 'hidden'}
           className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto"
         >
-          {upcomingEvents.map((event, index) => (
+          {events.map((event, index) => (
             <motion.div
-              key={event.title}
+              key={`${event.title}-${index}`}
               variants={cardVariants}
               className="bg-white rounded-2xl shadow-lg border-2 border-tamil-orange/20 overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-300"
             >

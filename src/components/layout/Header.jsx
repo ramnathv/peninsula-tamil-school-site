@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Bars3Icon, XMarkIcon, LanguageIcon } from '@heroicons/react/24/outline';
 import { useLanguage } from '../../context/LanguageContext';
 import { schoolInfo, navigationTranslations, t } from '../../data/content';
+import AnnouncementBanner from './AnnouncementBanner';
 
 const navigation = [
   { nameKey: 'home', href: '/' },
@@ -37,11 +38,12 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-md'
-          : 'bg-white border-b-2 border-tamil-red'
+        ? 'bg-white/95 backdrop-blur-md shadow-md'
+        : 'bg-white border-b-2 border-tamil-red'
         }`}
       role="banner"
     >
+      <AnnouncementBanner />
       <nav className="container-custom" role="navigation" aria-label="Main navigation">
         <div className="flex items-center justify-between py-4 md:py-5">
           {/* Logo */}
@@ -68,15 +70,15 @@ export default function Header() {
                 key={item.nameKey}
                 to={item.href}
                 className={`text-sm font-medium transition-colors duration-200 hover:text-tamil-red relative group ${location.pathname === item.href
-                    ? 'text-tamil-red'
-                    : 'text-text-primary'
+                  ? 'text-tamil-red'
+                  : 'text-text-primary'
                   }`}
               >
                 {t(navigationTranslations[item.nameKey], language)}
                 <span
                   className={`absolute -bottom-1 left-0 h-0.5 bg-tamil-red transition-all duration-300 ${location.pathname === item.href
-                      ? 'w-full'
-                      : 'w-0 group-hover:w-full'
+                    ? 'w-full'
+                    : 'w-0 group-hover:w-full'
                     }`}
                 />
               </Link>
@@ -139,8 +141,8 @@ export default function Header() {
                   key={item.nameKey}
                   to={item.href}
                   className={`block py-3 px-4 rounded-lg font-medium transition-colors ${location.pathname === item.href
-                      ? 'bg-bg-light-orange text-tamil-red'
-                      : 'text-text-primary hover:bg-bg-warm'
+                    ? 'bg-bg-light-orange text-tamil-red'
+                    : 'text-text-primary hover:bg-bg-warm'
                     }`}
                 >
                   {t(navigationTranslations[item.nameKey], language)}
