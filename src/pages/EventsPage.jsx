@@ -211,7 +211,7 @@ export default function EventsPage() {
                   Contact Us
                 </a>
                 <a
-                  href="https://tinyurl.com/PTScalendar2025-26"
+                  href="https://tinyurl.com/PTScalendar2026-27"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-6 py-3 bg-white text-tamil-red font-semibold rounded-lg border-2 border-tamil-red hover:bg-bg-light-orange transition-all duration-200"
