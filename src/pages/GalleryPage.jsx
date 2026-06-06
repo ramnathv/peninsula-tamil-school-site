@@ -4,22 +4,33 @@ import { galleryContent, t } from '../data/content';
 import { useLanguage } from '../context/LanguageContext';
 import GalleryGrid from '../components/gallery/GalleryGrid';
 import Lightbox from '../components/gallery/Lightbox';
+import { fetchGalleryCMS } from '../services/cmsService';
 
 const GalleryPage = () => {
   const { language } = useLanguage();
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedImage, setSelectedImage] = useState(null);
+  const [images, setImages] = useState(galleryContent.images);
   const [filteredImages, setFilteredImages] = useState(galleryContent.images);
 
   useEffect(() => {
+    const loadGallery = async () => {
+      const url = import.meta.env.VITE_CMS_GALLERY_URL;
+      const data = await fetchGalleryCMS(url, galleryContent.images);
+      setImages(data);
+    };
+    loadGallery();
+  }, []);
+
+  useEffect(() => {
     if (selectedCategory === 'all') {
-      setFilteredImages(galleryContent.images);
+      setFilteredImages(images);
     } else {
       setFilteredImages(
-        galleryContent.images.filter(img => img.category === selectedCategory)
+        images.filter(img => img.category === selectedCategory)
       );
     }
-  }, [selectedCategory]);
+  }, [selectedCategory, images]);
 
   return (
     <div className="min-h-screen bg-bg-cream">
@@ -53,7 +64,7 @@ const GalleryPage = () => {
         {/* Wave divider */}
         <div className="absolute bottom-0 left-0 right-0">
           <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
-            <path d="M0,64 C240,100 480,100 720,64 C960,28 1200,28 1440,64 L1440,120 L0,120 Z" fill="#FFF8F0"/>
+            <path d="M0,64 C240,100 480,100 720,64 C960,28 1200,28 1440,64 L1440,120 L0,120 Z" fill="#FFF8F0" />
           </svg>
         </div>
       </section>
