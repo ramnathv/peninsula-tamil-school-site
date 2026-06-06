@@ -15,7 +15,7 @@ export default function Hero() {
         className="absolute inset-0"
       >
         <img
-          src="/images/banner_1.webp"
+          src={`${import.meta.env.BASE_URL}images/banner_1.webp`}
           alt="Students celebrating Pongal, a traditional Tamil harvest festival at Peninsula Tamil School"
           className="w-full h-full object-cover"
         />

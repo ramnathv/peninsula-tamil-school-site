@@ -569,3 +569,25 @@ export const contactContent = {
     }
   }
 };
+
+// Dynamically prefix image paths with the Vite BASE_URL for GitHub Pages support
+const BASE_URL = import.meta.env.BASE_URL || '/';
+
+const adjustPath = (src) => {
+  if (src && src.startsWith('/')) {
+    return `${BASE_URL}${src.substring(1)}`;
+  }
+  return src;
+};
+
+if (galleryContent && galleryContent.images) {
+  galleryContent.images.forEach(img => {
+    img.src = adjustPath(img.src);
+  });
+}
+
+if (Array.isArray(galleryImages)) {
+  galleryImages.forEach(img => {
+    img.src = adjustPath(img.src);
+  });
+}

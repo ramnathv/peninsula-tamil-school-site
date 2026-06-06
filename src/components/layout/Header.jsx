@@ -36,11 +36,10 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
           ? 'bg-white/95 backdrop-blur-md shadow-md'
           : 'bg-white border-b-2 border-tamil-red'
-      }`}
+        }`}
       role="banner"
     >
       <nav className="container-custom" role="navigation" aria-label="Main navigation">
@@ -48,7 +47,7 @@ export default function Header() {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
             <img
-              src="/images/tamil_school_logo.webp"
+              src={`${import.meta.env.BASE_URL}images/tamil_school_logo.webp`}
               alt="Peninsula Tamil School Logo"
               className="w-12 h-12 md:w-16 md:h-16 transition-transform duration-300 group-hover:scale-105"
             />
@@ -68,19 +67,17 @@ export default function Header() {
               <Link
                 key={item.nameKey}
                 to={item.href}
-                className={`text-sm font-medium transition-colors duration-200 hover:text-tamil-red relative group ${
-                  location.pathname === item.href
+                className={`text-sm font-medium transition-colors duration-200 hover:text-tamil-red relative group ${location.pathname === item.href
                     ? 'text-tamil-red'
                     : 'text-text-primary'
-                }`}
+                  }`}
               >
                 {t(navigationTranslations[item.nameKey], language)}
                 <span
-                  className={`absolute -bottom-1 left-0 h-0.5 bg-tamil-red transition-all duration-300 ${
-                    location.pathname === item.href
+                  className={`absolute -bottom-1 left-0 h-0.5 bg-tamil-red transition-all duration-300 ${location.pathname === item.href
                       ? 'w-full'
                       : 'w-0 group-hover:w-full'
-                  }`}
+                    }`}
                 />
               </Link>
             ))}
@@ -141,11 +138,10 @@ export default function Header() {
                 <Link
                   key={item.nameKey}
                   to={item.href}
-                  className={`block py-3 px-4 rounded-lg font-medium transition-colors ${
-                    location.pathname === item.href
+                  className={`block py-3 px-4 rounded-lg font-medium transition-colors ${location.pathname === item.href
                       ? 'bg-bg-light-orange text-tamil-red'
                       : 'text-text-primary hover:bg-bg-warm'
-                  }`}
+                    }`}
                 >
                   {t(navigationTranslations[item.nameKey], language)}
                 </Link>
