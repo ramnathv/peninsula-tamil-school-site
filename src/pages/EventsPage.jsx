@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { eventsData, eventsDataTamizh, t } from '../data/content';
 import { CalendarIcon, ClockIcon, MapPinIcon } from '@heroicons/react/24/outline';
@@ -219,12 +220,12 @@ export default function EventsPage() {
                   : 'நிகழ்வு தேதிகள் மற்றும் விவரங்கள் மாற்றத்திற்கு உட்பட்டவை. பெனின்சுலா தமிழ் பள்ளியின் அறிவிப்புகள் மற்றும் தகவல்களுக்கு உங்கள் மின்னஞ்சலை தவறாமல் பார்க்கவும்.'}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
+                <Link
+                  to="/contact"
                   className="inline-flex items-center justify-center px-6 py-3 bg-tamil-red text-white font-semibold rounded-lg shadow-md hover:bg-tamil-maroon hover:shadow-lg transform hover:scale-105 transition-all duration-200"
                 >
                   {language === 'en' ? 'Contact Us' : 'எங்களைத் தொடர்பு கொள்ளவும்'}
-                </a>
+                </Link>
                 <a
                   href="https://tinyurl.com/PTScalendar2026-27"
                   target="_blank"

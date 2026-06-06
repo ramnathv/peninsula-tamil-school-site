@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { aboutContent, schoolInfo, t } from '../data/content';
 import { CheckCircleIcon } from '@heroicons/react/24/outline';
@@ -132,12 +133,12 @@ export default function AboutPage() {
               {t(aboutContent.joinCommunity.text, language)}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 className="inline-flex items-center justify-center px-8 py-4 bg-white text-tamil-red font-bold rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
               >
                 {language === 'en' ? 'Contact Us' : 'எங்களை தொடர்பு கொள்ளுங்கள்'}
-              </a>
+              </Link>
               <a
                 href={schoolInfo.enrollmentLink}
                 target="_blank"
