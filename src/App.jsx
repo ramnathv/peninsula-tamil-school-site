@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { LanguageProvider } from './context/LanguageContext';
 import Header from './components/layout/Header';
@@ -9,6 +9,8 @@ import ClassesPage from './pages/ClassesPage';
 import EventsPage from './pages/EventsPage';
 import GalleryPage from './pages/GalleryPage';
 import ContactPage from './pages/ContactPage';
+import { fetchSettingsCMS } from './services/cmsService';
+import { schoolInfo, heroContent } from './data/content';
 
 // ScrollToTop component resets window scroll position on every route change
 function ScrollToTop() {
@@ -22,6 +24,66 @@ function ScrollToTop() {
 }
 
 function App() {
+  const [settingsLoaded, setSettingsLoaded] = useState(false);
+
+  useEffect(() => {
+    const loadSettings = async () => {
+      const url = import.meta.env.VITE_CMS_SETTINGS_URL;
+      if (!url) return;
+
+      const data = await fetchSettingsCMS(url);
+      if (data) {
+        // Dynamically merge into schoolInfo
+        if (data.enrollmentLink) schoolInfo.enrollmentLink = data.enrollmentLink;
+        if (data.email) schoolInfo.email = data.email;
+        if (data.phone) schoolInfo.phone = data.phone;
+        if (data.addressVenue) {
+          schoolInfo.address.venue = data.addressVenue;
+        }
+        if (data.addressFull) {
+          schoolInfo.address.full = data.addressFull;
+        }
+        if (data.scheduleDay && schoolInfo.schedule) {
+          schoolInfo.schedule.day = data.scheduleDay;
+        }
+        if (data.scheduleTime && schoolInfo.schedule) {
+          schoolInfo.schedule.time = data.scheduleTime;
+        }
+
+        // Social media and Nonprofit status mapping
+        if (data.facebook && schoolInfo.social) {
+          schoolInfo.social.facebook = data.facebook;
+        }
+        if (data.instagram && schoolInfo.social) {
+          schoolInfo.social.instagram = data.instagram;
+        }
+        if (data.nonprofitEin && schoolInfo.nonprofit) {
+          schoolInfo.nonprofit.ein = data.nonprofitEin;
+        }
+        if (data.nonprofitStatus && schoolInfo.nonprofit) {
+          schoolInfo.nonprofit.status = data.nonprofitStatus;
+        }
+
+        // Homepage Hero headings mapping
+        if (data.heroTitleEn && heroContent.title) {
+          heroContent.title.en = data.heroTitleEn;
+        }
+        if (data.heroTitleTa && heroContent.title) {
+          heroContent.title.ta = data.heroTitleTa;
+        }
+        if (data.heroSubtitleEn && heroContent.subtitle) {
+          heroContent.subtitle.en = data.heroSubtitleEn;
+        }
+        if (data.heroSubtitleTa && heroContent.subtitle) {
+          heroContent.subtitle.ta = data.heroSubtitleTa;
+        }
+
+        setSettingsLoaded(true);
+      }
+    };
+    loadSettings();
+  }, []);
+
   return (
     <Router basename={import.meta.env.BASE_URL}>
       <ScrollToTop />
