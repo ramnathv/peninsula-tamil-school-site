@@ -223,12 +223,25 @@ export async function fetchGalleryCMS(url, fallbackData) {
       throw new Error("No data parsed from CSV");
     }
 
+    const BASE_URL = import.meta.env.BASE_URL || '/';
+    const adjustPath = (src) => {
+      if (!src) return '';
+      if (src.startsWith('/')) {
+        return `${BASE_URL}${src.substring(1)}`;
+      }
+      // Auto-upgrade insecure http links to secure https to prevent browser Mixed Content blockages
+      if (src.startsWith('http://')) {
+        return src.replace('http://', 'https://');
+      }
+      return src;
+    };
+
     // Map rows to match gallery image structure
     const mappedImages = parsedData
       .filter(item => item.src) // Image URL is required
       .map((item, index) => ({
         id: item.id ? parseInt(item.id, 10) : index + 1,
-        src: item.src,
+        src: adjustPath(item.src),
         alt: item.alt || item.title || 'Tamil School Image',
         title: item.title || '',
         description: item.description || '',
