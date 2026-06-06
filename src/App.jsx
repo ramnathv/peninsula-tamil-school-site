@@ -27,6 +27,20 @@ function App() {
   const [settingsLoaded, setSettingsLoaded] = useState(false);
 
   useEffect(() => {
+    // Prevent search engine indexing on staging/preview domains (like github.io)
+    const hostname = window.location.hostname;
+    if (hostname.includes('github.io') || hostname.includes('staging') || hostname.includes('preview')) {
+      let meta = document.querySelector('meta[name="robots"]');
+      if (!meta) {
+        meta = document.createElement('meta');
+        meta.name = 'robots';
+        document.head.appendChild(meta);
+      }
+      meta.content = 'noindex, nofollow';
+    }
+  }, []);
+
+  useEffect(() => {
     const loadSettings = async () => {
       const url = import.meta.env.VITE_CMS_SETTINGS_URL;
       if (!url) return;
