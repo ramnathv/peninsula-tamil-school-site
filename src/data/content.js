@@ -410,7 +410,6 @@ export const eventsData = [
     date: { month: "SEP", day: "06" },
     title: "Labour Day Holiday",
     time: "Sunday, September 6, 2026",
-    location: "No School",
     description: "School is closed in observance of the Labor Day holiday.",
     featured: false
   },
@@ -418,7 +417,6 @@ export const eventsData = [
     date: { month: "OCT", day: "04" },
     title: "Fall Break Holiday",
     time: "Sunday, October 4, 2026",
-    location: "No School",
     description: "School is closed for Fall Break.",
     featured: false
   },
@@ -434,7 +432,6 @@ export const eventsData = [
     date: { month: "NOV", day: "08" },
     title: "Deepavali Holiday",
     time: "Sunday, November 8, 2026",
-    location: "No School",
     description: "School is closed for the Deepavali holiday.",
     featured: false
   },
@@ -450,7 +447,6 @@ export const eventsData = [
     date: { month: "NOV", day: "29" },
     title: "Thanksgiving Holiday",
     time: "Sunday, November 29, 2026",
-    location: "No School",
     description: "School is closed for the Thanksgiving holiday weekend.",
     featured: false
   },
@@ -458,7 +454,6 @@ export const eventsData = [
     date: { month: "DEC", day: "20" },
     title: "Winter Break",
     time: "Sunday, December 20, 2026",
-    location: "No School",
     description: "School is closed for Winter Break.",
     featured: false
   },
@@ -466,7 +461,6 @@ export const eventsData = [
     date: { month: "DEC", day: "27" },
     title: "Winter Break",
     time: "Sunday, December 27, 2026",
-    location: "No School",
     description: "School is closed for Winter Break.",
     featured: false
   },
@@ -482,7 +476,6 @@ export const eventsData = [
     date: { month: "FEB", day: "14" },
     title: "Mid Winter Break",
     time: "Sunday, February 14, 2027",
-    location: "No School",
     description: "School is closed for Mid Winter Break.",
     featured: false
   },
@@ -498,7 +491,6 @@ export const eventsData = [
     date: { month: "MAR", day: "28" },
     title: "Spring Break",
     time: "Sunday, March 28, 2027",
-    location: "No School",
     description: "School is closed for Spring Break.",
     featured: false
   },

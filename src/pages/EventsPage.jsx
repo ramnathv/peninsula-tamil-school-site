@@ -24,7 +24,10 @@ const itemVariants = {
 
 function EventCard({ event }) {
   const isFeatured = event.featured;
-  const isHoliday = event.description && event.description.includes('No classes');
+  const isHoliday = event.description && (
+    event.description.includes('No classes') ||
+    event.description.includes('School is closed')
+  );
 
   return (
     <motion.div
