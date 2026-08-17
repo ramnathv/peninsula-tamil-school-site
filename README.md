@@ -1,6 +1,6 @@
 # Peninsula Tamil School Website
 
-Official website for **Peninsula Tamil School** – providing high-quality Tamil language and cultural education in San Mateo, CA.
+Official website for **Peninsula Tamil School**
 
 This website is a modern, high-performance, responsive single-page web application built with **React 19**, **Vite 7**, and **Tailwind CSS**. It features full bilingual support (English & Tamil) and integrates seamlessly with a headless **Google Sheets CMS** allowing staff to update content dynamically in real-time.
 
